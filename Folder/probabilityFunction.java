@@ -1,12 +1,14 @@
 package Folder;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class probabilityFunction extends JFrame {
     private JPanel contentPane;
+    private JButton btnNextPage;
 
     public probabilityFunction() {
+
+        btnNextPage.addActionListener(e -> onNext());
 
         //WINDOW SETTINGS
         this.setContentPane(contentPane);
@@ -26,6 +28,10 @@ public class probabilityFunction extends JFrame {
     private void onCancel() {
         // add your code here if necessary
         dispose();
+    }
+
+    private void onNext() {
+
     }
 
     public static void main(String[] args) {
