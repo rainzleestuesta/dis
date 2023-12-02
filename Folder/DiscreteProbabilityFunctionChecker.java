@@ -1,3 +1,5 @@
+package Folder;
+
 public class DiscreteProbabilityFunctionChecker {
 
     public static boolean isProbabilityFunction(double[] probabilities) {
