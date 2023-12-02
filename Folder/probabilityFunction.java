@@ -5,8 +5,6 @@ import java.awt.event.*;
 
 public class probabilityFunction extends JFrame {
     private JPanel contentPane;
-    private JButton buttonOK;
-    private JButton buttonCancel;
 
     public probabilityFunction() {
 
