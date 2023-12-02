@@ -3,42 +3,21 @@ package Folder;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class probabilityFunction extends JDialog {
+public class probabilityFunction extends JFrame {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
     public probabilityFunction() {
-        setContentPane(contentPane);
-        setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
 
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
-
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() when cross is clicked
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        //WINDOW SETTINGS
+        this.setContentPane(contentPane);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Probability Calculator");
+        this.setResizable(false);
+        this.setSize(720,400);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
 
     private void onOK() {
@@ -52,9 +31,6 @@ public class probabilityFunction extends JDialog {
     }
 
     public static void main(String[] args) {
-        probabilityFunction dialog = new probabilityFunction();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
+        new probabilityFunction();
     }
 }
